@@ -1,5 +1,7 @@
 package Enums;
 
-public class TransactionType {
-    
+public enum TransactionType {
+    WITHDRAW,
+    DEPOSIT,
+    TRANSFER
 }

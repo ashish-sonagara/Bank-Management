@@ -1,5 +1,6 @@
 package Enums;
 
-public class AccountType {
-    
+public enum AccountType {
+    SAVING,
+    CURRENT
 }
