@@ -51,7 +51,7 @@ public class Main {
             List<Transaction> transactions = transactionService.lastNTransactions(b1, 2);
             System.out.println("------ Last 2 Transactions------------");
             for(Transaction t : transactions){
-                System.out.println("Found Transaction of type " + t.transactionType + " of amount " + t.transactionAmount);
+                System.out.println("Found Transaction of type " + t.getTransactionType() + " of amount " + t.getTransactionAmount());
             }
         }
         catch(Exception e){
@@ -61,14 +61,28 @@ public class Main {
         System.out.println();
         List<Transaction> ts = transactionService.transactionBetweenDates(b1, LocalDate.of(2026, 04, 02), LocalDate.of(2026, 04, 03));
         for(Transaction transaction : ts){
-            System.out.println("Transaction of type " + transaction.transactionType + " of amount " + transaction.transactionAmount);
+            System.out.println("Transaction of type " + transaction.getTransactionType() + " of amount " + transaction.getTransactionAmount());
         }
 
         System.out.println();
         List<Transaction> highTransaction = transactionService.highValueTransaction(b1, 2000);
         System.out.println("----------- High Value Transactons -------------");
         for(Transaction transaction : highTransaction){
-            System.out.println("Transaction of type " + transaction.transactionType + " of amount " + transaction.transactionAmount);
+            System.out.println("Transaction of type " + transaction.getTransactionType() + " of amount " + transaction.getTransactionAmount());
         }
+
+        System.out.println();
+        // System.out.println(" -----------show all transaction of bank Account ----------------");
+        transactionService.showAllTransactions(b1);
+
+        System.out.println();
+        System.out.println("-----------Average Amount of the Transaction-----------");
+        double averageValue = transactionService.getAverageTransactionAmount(b1);
+        System.out.println(averageValue);
+
+        System.out.println();
+        System.out.println("----------------- Total Expense--------------");
+        double totalAmount = transactionService.getTotalExpenses(b1);
+        System.out.println(totalAmount);
     }
 }
