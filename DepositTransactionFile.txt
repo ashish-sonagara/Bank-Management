@@ -1,0 +1,4 @@
+ID: 53 | Type: DEPOSIT | Amount: +1800.0 | Date: 2026-04-07
+ID: 750 | Type: DEPOSIT | Amount: +1800.0 | Date: 2026-04-07
+ID: 461 | Type: DEPOSIT | Amount: +1800.0 | Date: 2026-04-07
+ID: 904 | Type: DEPOSIT | Amount: +3800.0 | Date: 2026-04-07
